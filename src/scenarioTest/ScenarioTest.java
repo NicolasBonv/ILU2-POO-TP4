@@ -4,6 +4,9 @@ import personnages.Gaulois;
 import produit.Poisson;
 import produit.Sanglier;
 import villagegaulois.Etal;
+import villagegaulois.IVillage;
+import villagegaulois.Produit;
+import villagegaulois.T;
 
 public class ScenarioTest {
 
@@ -35,10 +38,23 @@ public class ScenarioTest {
 
 	public static void main(String[] args) {
 
-		// TODO Partie 4 : creer de la classe anonyme Village
+		//TODO
+		public class Village implements IVillage{
 
-		// fin
+			@Override
+			public <P extends Produit> boolean installerVendeur(Etal<T> etal, Gaulois vendeur, P[] produit, int prix) {
+				// TODO Auto-generated method stub
+				return false;
+			}
 
+			@Override
+			public DepenseMarchand[] acheterProduit(String produit, int quantiteSouhaitee) {
+				DepenseMarchand depenseMarchand = new DepenseMarchand();
+				return null;
+			}
+			
+		}
+		Village village = new Village();
 		Gaulois ordralfabetix = new Gaulois("Ordralfabétix", 9);
 		Gaulois obelix = new Gaulois("Obélix", 20);
 		Gaulois asterix = new Gaulois("Astérix", 6);
