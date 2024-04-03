@@ -15,4 +15,8 @@ public class Poisson implements IProduit {
 	public String description() {
 		return (nom+" pêchés "+datePeche);
 	}
+	@Override
+	public double calculerPrix(int prix) {
+		return prix;
+	}
 }

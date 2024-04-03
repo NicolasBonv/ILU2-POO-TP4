@@ -19,4 +19,8 @@ public class Sanglier implements IProduit {
 	public String description() {
 		return (nom+" de "+poids+" kg chassé par "+chasseur);
 	}
+	@Override
+	public double calculerPrix(int prix) {
+		return prix;
+	}
 }

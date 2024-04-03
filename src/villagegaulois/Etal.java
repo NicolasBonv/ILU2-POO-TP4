@@ -19,12 +19,7 @@ public class Etal <T extends IProduit> implements IEtal {
 		return nbProduit;
 	}
 	
-	public void occuperEtal(Gaulois vendeur, String produit, int quantite) {
-		this.vendeur = vendeur;
-		this.produit = produit;
-		this.nbProduit = quantite;
-		etalOccupe = true;
-	}
+
 	
 	public void installerVendeur(Gaulois vendeur, T[] produits, int prix) {
 		this.vendeur = vendeur;
@@ -47,10 +42,6 @@ public class Etal <T extends IProduit> implements IEtal {
 		}
 		return quantiteAVendre;
 	}
-	/*public int calculerPrix(int prix) {
-		
-		return -1;
-	}*/
 	@Override
 	public double acheterProduit(int quantiteSouhaite) {
 		double prixPaye = 0;
